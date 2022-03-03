@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择器权重</title>
+
+    <style>
+        *{
+            font-size: 40px;
+        }
+
+        div{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- div的样式和通配符样式选择 div -->
+        我是div
+        <!-- 继承自div的样式和通配符样式选择 通配符 -->
+        <span>我是div内的span</span>
+    </div>
+</body>
+</html>

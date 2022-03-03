@@ -1,0 +1,169 @@
+/* 公共样式 */
+body{
+    font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+    min-width: 1226px;
+}
+
+.clearfix::before,
+.clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* 导航条样式 */
+.topbar-wrapper{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(51,51,51);
+    line-height: 40px;
+}
+
+.topbar{
+    width: 1226px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.topbar a{
+    color: #b0b0b0;
+    font-size: 12px;
+    display: block;
+    height: 100%;
+}
+
+.topbar a:hover{
+    color: rgb(255,255,255);
+}
+
+.topbar .service{
+    float: left;
+}
+
+.topbar .service li{
+    float: left;
+}
+
+.topbar .service li.download{
+    position: relative;
+}
+
+.topbar .service li.download::after{
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid;
+    display: none;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-color: transparent transparent white transparent;
+}
+
+.topbar .service li.download:hover::after{
+    display: block;
+}
+
+.topbar .service li.download .qrcode{
+    display: none;
+    position: absolute;
+
+    /* 设置居中 */
+    transform: translateX(-50%);
+    left: 50%;
+
+    text-align: center;
+    box-shadow: 1px 2px 10px rgb(0, 0, 0, .1);
+}
+
+.topbar .service li.download .qrcode img{
+    width: 90px;
+    height: 90px;
+    margin: 18px 17px -5px;
+    display: block;
+}
+
+.topbar .service li.download:hover .qrcode{
+    display: block;
+}
+
+.topbar .service li.download:hover i{
+    display: block;
+}
+
+.topbar .cart{
+    float: right;
+    background-color: rgb(66,66,66);
+    height: 100%;
+    text-align: center;
+    margin-left: 10px;
+    padding: 0 20px;
+
+    position: relative;
+}
+
+.topbar .cart a{
+    color: white;
+}
+
+.topbar .cart .cart-menu{
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 40px;
+
+    width: 296px;
+    height: 50px;
+    background-color: white;
+    /* border: 1px solid black; */
+    box-shadow: 1px 2px 10px rgb(0, 0, 0, .15);
+    font-size: 12px;
+    padding: 5px 0px 5px 10px;
+    line-height: 50px;
+}
+
+.topbar .cart:hover{
+    background-color: white;
+}
+
+.topbar .cart:hover a{
+    color: rgb(255,106,0);
+}
+
+.topbar .cart:hover .cart-menu{
+    display: block;
+}
+
+
+.topbar .user-info{
+    float: right;
+}
+
+.topbar .user-info li{
+    float: left;
+}
+
+.topbar .user-info li:not(.spacer){
+    padding: 0 5px;
+}
+
+.topbar .user-info li.msg{
+    padding: 0 10px;
+}
+
+.topbar .service li.spacer{
+    background-color: rgb(66,60,55);
+    height: 16px;
+    width: 1.5px;
+    margin: 0 8px;
+    margin-top: 12px;
+}
+
+.topbar .user-info li.spacer{
+    margin: 0 3px;
+}

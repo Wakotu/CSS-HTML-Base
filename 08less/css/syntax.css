@@ -1,0 +1,12 @@
+body {
+  background-color: #bfa;
+}
+body .box1 {
+  background-color: violet;
+}
+div {
+  width: 300px;
+  height: 300px;
+  border: 1px solid skyblue;
+  margin-bottom: 10px;
+}

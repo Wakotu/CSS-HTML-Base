@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css选择器</title>
+
+    <style>
+        .red{
+            color: red;
+        }
+
+        /* 交集选择器 */
+        div.red{
+            background-color: yellow;
+        }
+
+        /* 并集选择器 */
+       h1, span{
+           font-style: italic;
+       } 
+
+       div > span{
+           color: purple;
+       }
+
+       /* p + span{
+           color: violet;
+       } */
+
+       /* li:first-child{
+           color: red;
+       } */
+       li:nth-child(2){
+           color: red;
+       }
+
+       a:active{
+           font-size: 50px;
+       }
+       
+       a:hover{
+           color: #ddd;
+       }
+    </style>
+</head>
+<body>
+    <div class="red">
+        div red
+    </div>
+
+    <p class="red">
+        p red
+    </p>
+
+    <h1>我是h1</h1>
+    <span>我是span</span>
+
+    <br><br><br>
+    <hr>
+
+    <div>
+        我是div
+        <p>
+            我是div内的p
+            <span>我是span</span>
+        </p>
+        <span>我是span</span>
+    </div>
+
+    <br><br>
+    <hr>
+    
+    <ul>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+    </ul>
+
+    <hr>
+
+    <a href="#">百度</a>
+</body>
+</html>

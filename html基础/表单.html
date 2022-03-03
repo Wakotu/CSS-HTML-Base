@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单</title>
+</head>
+<body>
+    <form action="./target.html" method="get">
+        <!-- 文本框 -->
+        用户名： <input type="text" name="username" id="" autocomplete="off">
+        <br><br>
+        密码： <input type="password" name="pwd" id="">
+        <br><br>
+        <!-- 单选按钮 -->
+        年级：
+        大一<input type="radio" name="grade" id="" value="1">
+        大二<input type="radio" name="grade" id="" value="2">
+        大三<input type="radio" name="grade" id="" value="3">
+        大四<input type="radio" name="grade" id="" value="4">
+        <br><br>
+
+        <!-- 复选框 -->
+        爱好：
+        游泳<input type="checkbox" name="hobby" id="" value="swimming">
+        篮球<input type="checkbox" name="hobby" id="" value="basketball">
+        足球<input type="checkbox" name="hobby" id="" value="soccer">
+        跑步<input type="checkbox" name="hobby" id="" value="running">
+        <br><br>
+        
+        日期：
+        <input type="date" name="date" id="">
+        <br><br>
+
+        邮箱：
+        <input type="email" name="" id="">
+        <br><br>
+
+        <!-- 下拉选择框 -->
+        城市：
+        <select name="city" id="">
+            <option value="">请选择</option>
+            <option value="Beijing">北京</option>
+            <option value="Shanghai">上海</option>
+            <option value="Wuhan">武汉</option>
+            <option value="Shenzhen">深圳</option>
+        </select>
+        <br><br>
+
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>

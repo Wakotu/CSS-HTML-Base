@@ -1,0 +1,56 @@
+<!--
+ * @Author: Axiuxiu
+ * @Date: 2022-03-03 15:51:26
+ * @LastEditTime: 2022-03-03 15:54:33
+ * @Description: css变量
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css变量</title>
+
+    <style>
+        html{
+            --color:#bfa;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+
+        .box1 {
+            background-color: var(--color);
+        }
+
+        .box2 {
+            border: 10px solid var(--color);
+        }
+
+        .box3 {
+            font-size: 20px;
+            color: var(--color);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box1">
+        我是一个盒子
+    </div>
+    <div class="box2">
+        我是一个盒子
+    </div>
+    <div class="box3">
+        我是一个盒子
+    </div>
+</body>
+
+</html>

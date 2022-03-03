@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>竖直布局</title>
+
+    <style>
+        .box1 {
+            background-color: yellow;
+            /* height: 400px; */
+            /* 需设置边框下方的margin-bottom才会将元素撑开, margin-top才会相对父元素边框偏移，否则会相对页面边框 */
+            /* border: 1px dotted; */
+        }
+
+        .box2 {
+            background-color: yellowgreen;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 100px;
+            margin-left: 50px;
+            /* margin-top: 50px; */
+        }
+        
+        .box3{
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+        <div class="box2"></div>
+    </div>
+
+    <div class="box3"></div>
+
+</body>
+
+</html>

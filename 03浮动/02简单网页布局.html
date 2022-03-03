@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单网页布局</title>
+
+    <style>
+        /* 公共样式 */
+        header, main, footer{
+            /* 居中 */
+            margin: 0 auto;
+            width: 1000px;
+        }
+
+        /* 头部样式 */
+        header{
+            background-color: silver;
+            height: 120px;
+            margin-top: 10px;
+        }
+
+        /* 主体样式 */
+        main{
+            background-color: #dfa;
+            height: 300px;
+            margin: 10px auto;
+        }
+
+        main>*{
+            height: 100%;
+            float: left;
+        }
+
+        main nav{
+            width: 200px;
+            background-color: orange;
+        }
+
+        main article{
+            width: 600px;
+            background-color: violet;
+        }
+
+        main aside{
+            width: 200px;
+            background-color: skyblue;
+        }
+
+        /* 底部样式 */
+        footer{
+            background-color: tomato;
+            height: 120px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- 头部 -->
+    <header></header>
+
+    <!-- 主体 -->
+    <main>
+       <nav></nav> 
+
+       <article></article>
+
+       <aside></aside>
+    </main>
+    
+    <!-- 底部 -->
+    <footer></footer>
+</body>
+</html>

@@ -224,47 +224,6 @@ a{
     transform:scale(0.8, 0.8);
 }
 
-/* 搜索栏 */
-.header .search{
-    float: right;
-    width: 300px;
-    margin: 24px 0;
-    /* background-color: skyblue; */
-}
-
-.header .search .input-box,
-.header .search .search-btn{
-    float: left;
-    border: 1px solid #E0E0E0;
-    line-height: 50px;
-}
-
-.header .search .input-box{
-    width: 230px;
-    height: 50px;
-    color: #7575A1;
-    font-size: 14px;
-    padding-left: 10px;
-}
-
-.header .search .search-btn{
-    width: 56px;
-    height: 50px;
-    text-align: center;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.header .search:hover .input-box,
-.header .search:hover .search-btn{
-    border: 1px solid #B0B0B0;
-}
-
-.header .search .search-btn:hover{
-    background-color: #FF6700;
-    color: #FFFFFF;
-}
-
 /* 商品列表 */
 .header .goods{
     float: left;
@@ -279,9 +238,7 @@ a{
     padding: 26px 10px 38px 10px;
 }
 
-.header .goods li a:hover{
-    color: #FF6700;
-}
+
 
 .header .goods li a{
     color: #333333;
@@ -306,10 +263,80 @@ a{
     height: 230px;   
 }
 
+.goods li:hover a{
+    color: #FF6700;
+}
+
 .goods-info:hover{
     border-top: 1px solid #E0E0E0;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, .1);
     /* 注意这里的height属性会被上面的选择器覆盖，由于优先级的问题 */
     height: 230px !important;  
     /* height: 230px; */
+}
+
+/* 搜索栏 */
+.seacrh-wrapper{
+    width: 300px;
+    height: 50px;
+    background-color: violet;
+    float: right;
+    margin-top: 25px;
+    position: relative;
+}
+
+.seacrh-wrapper .search-input, .seacrh-wrapper .search-btn{
+    float: left;
+    border: 1px solid #E0E0E0;
+}
+
+.seacrh-wrapper .search-input{
+    width: 228px;
+    height: 48px;
+    padding: 0 10px 0 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-input:focus,
+.search-input:focus + .search-btn{
+    /* background-color: violet; */
+    border: 1px solid #FF6700 !important;
+}
+
+.seacrh-wrapper .dropdown-list{
+    display: none;
+    width: 248px;
+    height: 260px;
+    background-color: white;
+    border: 1px solid #FF6700;
+    margin-top: -1px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.search-input:focus ~ .dropdown-list{
+    display: block;
+}
+
+.seacrh-wrapper .search-btn{
+    width: 51px;
+    height: 50px;
+    margin-left: -1px;
+    background-color: white;
+    padding: 0;
+    cursor: pointer;
+    font-size: 20px;
+    color: #616161;
+}
+
+.seacrh-wrapper .search-btn:hover{
+    background-color: #FF6700;
+    color: white;
+}
+
+.seacrh-wrapper:hover .search-btn,
+.seacrh-wrapper:hover .search-input{
+    border: 1px solid #B0B0B0;
 }

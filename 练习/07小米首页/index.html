@@ -1,7 +1,7 @@
 <!--
  * @Author: Axiuxiu
  * @Date: 2022-02-22 15:13:36
- * @LastEditTime: 2022-03-04 17:25:05
+ * @LastEditTime: 2022-03-04 22:36:48
  * @Description: 小米首页
 -->
 <!DOCTYPE html>
@@ -102,19 +102,37 @@
             <!-- 商品列表 -->
             <div class="nav-wrapper">
                 <ul class="goods">
-                    <li><a href="javascript:;">Xiaomi手机</a></li>
+                    <li class="all-goods">
+                        <a href="javascript:;">全部商品分类</a>
+                        
+                        <!-- 左侧导航条 -->
+                        <ul class="left-menu">
+                            <li><a href="javascript:;">手机 <i class="fa-solid fa-angle-right"></i></a></li>
+                            <li><a href="javascript:;">电视 <i class="fa-solid fa-angle-right"></i></a></li>
+                            <li><a href="javascript:;">笔记本 平板 <i class="fa-solid fa-angle-right"></i></a></li>
+                            <li><a href="javascript:;">家电 <i class="fa-solid fa-angle-right"></i></a></li>
+                            <li><a href="javascript:;">出行 穿戴 <i class="fa-solid fa-angle-right"></i></a></li>
+                            <li><a href="javascript:;">智能 路由器 <i class="fa-solid fa-angle-right"></i></a></li>
+                            <li><a href="javascript:;">电源 配件 <i class="fa-solid fa-angle-right"></i></a></li>
+                            <li><a href="javascript:;">健康 儿童 <i class="fa-solid fa-angle-right"></i></a></li>
+                            <li><a href="javascript:;">耳机 印象 <i class="fa-solid fa-angle-right"></i></a></li>
+                            <li><a href="javascript:;">生活 箱包 <i class="fa-solid fa-angle-right"></i></a></li>
+                        </ul>
+                    </li>
 
-                    <li><a href="javascript:;">Redmi红米</a></li>
+                    <li class="toggle-down"><a href="javascript:;">Xiaomi手机</a></li>
 
-                    <li><a href="javascript:;">电视</a></li>
+                    <li class="toggle-down"><a href="javascript:;">Redmi红米</a></li>
 
-                    <li><a href="javascript:;">笔记本</a></li>
+                    <li class="toggle-down"><a href="javascript:;">电视</a></li>
 
-                    <li><a href="javascript:;">平板</a></li>
+                    <li class="toggle-down"><a href="javascript:;">笔记本</a></li>
 
-                    <li><a href="javascript:;">家电</a></li>
+                    <li class="toggle-down"><a href="javascript:;">平板</a></li>
 
-                    <li><a href="javascript:;">路由器</a></li>
+                    <li class="toggle-down"><a href="javascript:;">家电</a></li>
+
+                    <li class="toggle-down"><a href="javascript:;">路由器</a></li>
 
                     <li><a href="javascript:;">服务</a></li>
 
@@ -138,6 +156,25 @@
                     <div class="dropdown-list"></div>
                 </form>
             </div>
+        </div>
+    </div>
+
+    <!-- 轮播图 -->
+    <div class="banner-wrapper">
+        <div class="banner">
+            <ul class="image-list">
+                <li><a href="#"><img src="./images/banners/banner1.webp" alt=""></a></li>
+                <li><a href="#"><img src="./images/banners/banner2.webp" alt=""></a></li>
+                <li><a href="#"><img src="./images/banners/banner3.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./images/banners/banner4.webp" alt=""></a></li>
+            </ul>
+
+            <ul class="pointers">
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
         </div>
     </div>
 </body>

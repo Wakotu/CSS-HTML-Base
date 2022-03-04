@@ -331,12 +331,14 @@ a{
     color: #616161;
 }
 
-.seacrh-wrapper .search-btn:hover{
-    background-color: #FF6700;
-    color: white;
-}
-
 .seacrh-wrapper:hover .search-btn,
 .seacrh-wrapper:hover .search-input{
     border: 1px solid #B0B0B0;
 }
+
+.seacrh-wrapper .search-btn:hover{
+    background-color: #FF6700;
+    color: white;
+    border: none;
+}
+

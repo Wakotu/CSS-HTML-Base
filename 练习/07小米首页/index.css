@@ -1,4 +1,6 @@
-/* 公共样式 */
+/* 
+    公共样式
+*/
 body{
     font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
     min-width: 1226px;
@@ -15,7 +17,9 @@ a{
     text-decoration: none;
 }
 
-/* 导航条样式 */
+/* 
+    导航条样式
+*/
 .topbar-wrapper{
     width: 100%;
     height: 40px;
@@ -70,7 +74,9 @@ a{
 }
 
 .topbar .service li.download .qrcode{
-    display: none;
+    /* display: none; */
+    height: 0;
+    overflow: hidden;
     position: absolute;
 
     /* 设置居中 */
@@ -79,6 +85,10 @@ a{
 
     text-align: center;
     box-shadow: 1px 2px 10px rgb(0, 0, 0, .1);
+    background-color: white;
+
+    /* 添加过渡效果 */
+    transition: height 0.3s;
 }
 
 .topbar .service li.download .qrcode img{
@@ -89,11 +99,16 @@ a{
 }
 
 .topbar .service li.download:hover .qrcode{
-    display: block;
+    /* display: block; */
+    height: 142px;
 }
 
 .topbar .service li.download:hover i{
     display: block;
+}
+
+.topbar .service li.download:hover a{
+    color: rgb(255,255,255);
 }
 
 .topbar .cart{
@@ -112,19 +127,22 @@ a{
 }
 
 .topbar .cart .cart-menu{
-    display: none;
+    /* display: none; */
     position: absolute;
     right: 0px;
     top: 40px;
 
     width: 296px;
-    height: 50px;
+    /* height: 50px; */
+    height: 0px;
+    overflow: hidden;
     background-color: white;
-    /* border: 1px solid black; */
     box-shadow: 1px 2px 10px rgb(0, 0, 0, .15);
+    /* border: 1px solid black; */
     font-size: 12px;
-    padding: 5px 0px 5px 10px;
     line-height: 50px;
+
+    transition: all 0.3s;
 }
 
 .topbar .cart:hover{
@@ -136,7 +154,10 @@ a{
 }
 
 .topbar .cart:hover .cart-menu{
-    display: block;
+    /* display: block; */
+    height: 50px;
+    padding: 5px 0px 5px 10px;
+    
 }
 
 
@@ -156,7 +177,7 @@ a{
     padding: 0 10px;
 }
 
-.topbar .service li.spacer{
+.topbar li.spacer{
     background-color: rgb(66,60,55);
     height: 16px;
     width: 1.5px;
@@ -165,5 +186,130 @@ a{
 }
 
 .topbar .user-info li.spacer{
-    margin: 0 3px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+/* 
+    头部样式
+*/
+.header-wrapper{
+    width: 100%;
+    height: 100px;
+    position: relative;
+}
+
+.header{
+    width: 1226px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.header .logo{
+    display: block;
+    width: 56px;
+    height: 56px;
+    background-image: url('./images/mi.png');
+    background-size: 56px 56px;
+    background-position: center;
+    margin-top: 22px;
+    float: left;
+
+    transform-origin: center center;
+
+    transition: all 0.2s;
+}
+
+.header .logo:active{
+    transform:scale(0.8, 0.8);
+}
+
+/* 搜索栏 */
+.header .search{
+    float: right;
+    width: 300px;
+    margin: 24px 0;
+    /* background-color: skyblue; */
+}
+
+.header .search .input-box,
+.header .search .search-btn{
+    float: left;
+    border: 1px solid #E0E0E0;
+    line-height: 50px;
+}
+
+.header .search .input-box{
+    width: 230px;
+    height: 50px;
+    color: #7575A1;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.header .search .search-btn{
+    width: 56px;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.header .search:hover .input-box,
+.header .search:hover .search-btn{
+    border: 1px solid #B0B0B0;
+}
+
+.header .search .search-btn:hover{
+    background-color: #FF6700;
+    color: #FFFFFF;
+}
+
+/* 商品列表 */
+.header .goods{
+    float: left;
+    /* width: 200px; */
+    height: 88px;
+    padding: 12px 0 0 180px;
+}
+
+.header .goods li{
+    float: left;
+    font-size: 16px;
+    padding: 26px 10px 38px 10px;
+}
+
+.header .goods li a:hover{
+    color: #FF6700;
+}
+
+.header .goods li a{
+    color: #333333;
+}
+
+.header .nav-wrapper .goods-info{
+    /* background-color: violet; */
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    
+    transition: height 0.3s;
+}
+
+.goods li:hover ~ .goods-info{
+    border-top: 1px solid #E0E0E0;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .1);
+    height: 230px;   
+}
+
+.goods-info:hover{
+    border-top: 1px solid #E0E0E0;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .1);
+    /* 注意这里的height属性会被上面的选择器覆盖，由于优先级的问题 */
+    height: 230px !important;  
+    /* height: 230px; */
 }

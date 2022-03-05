@@ -1,7 +1,7 @@
 <!--
  * @Author: Axiuxiu
  * @Date: 2022-02-22 15:13:36
- * @LastEditTime: 2022-03-05 10:56:23
+ * @LastEditTime: 2022-03-05 16:23:10
  * @Description: 小米首页
 -->
 <!DOCTYPE html>
@@ -104,7 +104,7 @@
                 <ul class="goods">
                     <li class="all-goods">
                         <a href="javascript:;">全部商品分类</a>
-                        
+
                         <!-- 左侧导航条 -->
                         <ul class="left-menu">
                             <li><a href="javascript:;">手机 <i class="fa-solid fa-angle-right"></i></a></li>
@@ -117,6 +117,9 @@
                             <li><a href="javascript:;">健康 儿童 <i class="fa-solid fa-angle-right"></i></a></li>
                             <li><a href="javascript:;">耳机 印象 <i class="fa-solid fa-angle-right"></i></a></li>
                             <li><a href="javascript:;">生活 箱包 <i class="fa-solid fa-angle-right"></i></a></li>
+
+                            <!-- 弹出层 -->
+                            <ul class="recomend-list"></ul>
                         </ul>
                     </li>
 
@@ -181,6 +184,69 @@
                 <a href="#" class="next"></a>
             </div>
         </div>
+    </div>
+
+    <!-- 工具条 -->
+    <ul class="toolbar">
+        <li>
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <div class="popup-layer"></div>
+        </li>
+        <li>
+            <i class="fa-solid fa-user"></i>
+            <div class="popup-layer"></div>
+        </li>
+        <li>
+            <i class="fa-solid fa-wrench"></i>
+            <div class="popup-layer"></div>
+
+        </li>
+        <li>
+            <i class="fa-solid fa-headset"></i>
+            <div class="popup-layer"></div>
+
+        </li>
+        <li>
+            <i class="fa-solid fa-cart-arrow-down"></i>
+            <div class="popup-layer"></div>
+
+        </li>
+    </ul>
+
+    <!-- 广告栏 -->
+    <div class="ad-container">
+        <ul class="shortcut-list">
+            <li><a href="#">
+                <i class="fa-regular fa-clock"></i>
+                保障服务
+            </a></li>
+            <li><a href="#">
+                <i class="fa-solid fa-building"></i>
+                企业团购
+            </a></li>
+            <li><a href="#">
+                <i class="fa-solid fa-f"></i>
+                F码通道
+            </a></li>
+            <li><a href="#">
+                <i class="fa-solid fa-sim-card"></i>
+                米粉卡
+            </a></li>
+            <li><a href="#">
+                <i class="fa-solid fa-yen-sign"></i>
+                以旧换新
+            </a></li>
+            <li><a href="#">
+                <i class="fa-solid fa-mobile"></i>
+                话费充值
+            </a></li>
+        </ul>
+
+        <ul class="img-list">
+            <li><a href="#"><img src="./images/ads/ad1.jpg" alt=""></a></li>
+            <li><a href="#"><img src="./images/ads/ad2.png" alt=""></a></li>
+            <li><a href="#"><img src="./images/ads/ad3.jpeg" alt=""></a></li>
+        </ul>
     </div>
 </body>
 

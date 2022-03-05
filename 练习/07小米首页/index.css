@@ -386,7 +386,7 @@ a{
     background-color: #FF6700;
 }
 
-/* 左侧菜单弹出层实现 */
+/* 左侧菜单弹出层 */
 .all-goods .left-menu .recomend-list{
     background-color: white;
     width: 446px;
@@ -594,6 +594,7 @@ a{
 .ad-container .shortcut-list li a i{
     display: block;
     font-size: 22px;
+    margin-bottom: 5px;
 }
 
 .ad-container .shortcut-list li a:hover{

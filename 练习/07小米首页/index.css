@@ -78,6 +78,7 @@ a{
     height: 0;
     overflow: hidden;
     position: absolute;
+    z-index: 2;
 
     /* 设置居中 */
     transform: translateX(-50%);
@@ -318,6 +319,7 @@ a{
     position: absolute;
     top: 100%;
     left: 0;
+    z-index: 2;
 }
 
 .search-input:focus ~ .dropdown-list{
@@ -356,7 +358,7 @@ a{
     position: absolute;
     z-index: 2;
     top: 100%;
-    left: -95px;
+    left: -96px;
     visibility: visible;
     padding: 20px 0;
 }
@@ -426,7 +428,38 @@ a{
     background-color: rgba(0, 0, 0, .4);
 }
 
-.banner .pointers li a:hover{
-    border: 2px solid rgba(0, 0, 0, .4) ;
+.banner .pointers li a:hover,
+.banner .pointers li.active a{
+    border: 2px solid rgba(0, 0, 0, .4);
     background-color: hsla(0,0%,100%,.3);
+}
+
+/* 前进后退标志 */
+.banner .slide a{
+    display: block;
+    position: absolute;
+    background-image: url('./images/icon-slides.png');
+    width: 41px;
+    height: 69px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+
+.banner .slide a.prev{
+    left: 235px;
+    background-position: -83px 0;
+}
+
+.banner .slide a.prev:hover{
+    background-position: 0 0;
+}
+
+.banner .slide a.next{
+    right: 0;
+    background-position: -124px 0;
+}
+
+.banner .slide a.next:hover{
+    background-position: -42px 0;
 }

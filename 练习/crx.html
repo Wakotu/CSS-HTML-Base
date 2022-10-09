@@ -1,0 +1,421 @@
+<!--
+ * @Author: Axiuxiu
+ * @Date: 2022-04-18 14:38:54
+ * @LastEditTime: 2022-04-18 17:17:44
+ * @Description: crxcavator仿例
+ * @Todo: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRXavator</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/font/css/all.css">
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .topbar {
+            height: 48px;
+            border-bottom: 2px solid #A7A7A7;
+            padding: 0 16px;
+            position: relative;
+        }
+
+        .topbar .left-list li {
+            float: left;
+            line-height: 48px;
+            font-size: 16px;
+            color: #626262;
+            padding: 0 16px;
+            cursor: pointer;
+        }
+
+        .topbar .left-list li:hover {
+            background-color: #F6F6F6;
+        }
+
+        .topbar .login-logout {
+            padding: 0 16px;
+            line-height: 48px;
+            font-size: 16px;
+            color: #212121;
+            float: right;
+            cursor: pointer;
+        }
+
+        .topbar .login-logout:hover {
+            background-color: #F6F6F6;
+        }
+
+        .topbar .search {
+            float: right;
+            height: 32px;
+            background-color: #F0F0F0;
+            border-radius: 16px;
+            padding: 0 16px;
+            margin-top: 8px;
+        }
+
+        .topbar .search input {
+            width: 174px;
+            height: 16px;
+            padding: 8px 0;
+            border: none;
+            outline: none;
+            background-color: #F0F0F0;
+
+        }
+
+        .topbar .title {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto auto;
+            width: 200px;
+            height: 32px;
+        }
+
+        .topbar .title>* {
+            float: left;
+        }
+
+        .topbar .title img {
+            height: 32px;
+            width: 32px;
+            padding: 0 4px;
+        }
+
+        .topbar .title .text {
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: 400;
+        }
+
+        .left-side {
+            width: 400px;
+            height: calc(100% - 50px);
+            /* background-color: violet; */
+        }
+
+        .card {
+            box-shadow: 0 1px 5px rgba(0, 0, 0, .12);
+            border-radius: 5px;
+        }
+
+        .left-side .profile {
+            width: 384px;
+            height: 391px;
+            margin: 10px auto;
+            position: relative;
+        }
+
+        .left-side .profile .top>* {
+            float: left;
+        }
+
+        .left-side .profile .top .image-wrapper {
+            padding: 12px 0;
+            margin-top: 10px;
+        }
+
+        .left-side .profile .top .image-wrapper img {
+            width: 86px;
+            height: 81px;
+        }
+
+        .left-side .profile .top .text {
+            padding: 12px 0;
+            width: 288px;
+            margin-left: 5px;
+        }
+
+        .left-side .profile .top .text .title {
+            line-height: 40px;
+            font-size: 1.875rem;
+        }
+
+        .left-side .profile .top .text .info {
+            font-size: 0.875rem;
+            line-height: 1.275rem;
+            color: #858585;
+        }
+
+        .left-side .profile .criterion {
+            padding-left: 15px;
+            color: #838383;
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        .left-side .profile .criterion b {
+            font-weight: bolder;
+        }
+
+        .left-side .profile .policy {
+            color: #202020;
+            font-size: 16px;
+            line-height: 30px;
+            margin-left: 10px;
+            padding: 0 5px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .left-side .profile .policy:hover {
+            background-color: #F6F6F6;
+        }
+
+        .left-side .profile .webstore {
+            margin: 5px 30px;
+            width: 48px;
+            height: 48px;
+            border-radius: 5px;
+            box-shadow: 1px 2px 5px rgba(0, 0, 0, .1);
+            background-color: #F5F5F5;
+            cursor: pointer;
+        }
+
+        .left-side .profile .webstore:hover {
+            background-color: #E5E5E5;
+        }
+
+        .left-side .profile .develop {
+            color: #202020;
+            font-size: 16px;
+            line-height: 30px;
+            margin-left: 10px;
+            padding: 0 5px;
+            cursor: pointer;
+
+            position: relative;
+        }
+
+        .left-side .profile .develop i {
+            position: absolute;
+            right: 10px;
+            line-height: 30px;
+        }
+
+        .left-side .profile .footer {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            color: #828282;
+            font-size: 12px;
+            line-height: 20px;
+        }
+
+        .left-side .profile .footer .left {
+            float: left;
+            margin-left: 5px;
+        }
+
+        .left-side .profile .footer .right {
+            float: right;
+            margin-right: 10px;
+        }
+
+        .left-side .bottom{
+            margin: 10px auto 0 auto;
+            width: 384px;
+        }
+
+        .left-side .bottom > *{
+            float: left;
+        }
+
+        .left-side .bottom .left{
+            width: 180px;
+        }
+
+        .left-side .bottom .left .version {
+            border: 1px solid black;
+            width: 170px;
+            height: 56px;
+            position: relative;
+            font-size: 15px;
+            color: #212121;
+            line-height: 56px;
+            padding-left: 10px;
+        }
+
+        .left-side .bottom .left .version i{
+            position: absolute;
+            right: 15px;
+            line-height: 56px;
+            font-size: 15px;
+        }
+
+        .left-side .bottom .left .version::before {
+            content: 'Version';
+            /* display: block; */
+            font-size: 10px;
+            color: #A4A4A4;
+            background-color: white;
+            position: absolute;
+            line-height: 1;
+            top: -6px;
+            left: 10px;
+        }
+
+        .left-side .bottom .left .source-code{
+            margin-top: 10px;
+            width: 180px;
+            height: 56px;
+            font-size: 16px;
+            text-align: center;
+            line-height: 56px;
+            cursor: pointer;
+
+            transition: all 0.2s;
+        }
+
+        .left-side .bottom .left .source-code:hover{
+            background-color: #EEEEEE;
+        }
+
+        .left-side .bottom .contents{
+            width: 180px;
+            margin-left: 20px;
+            border-radius: 0px;
+            box-shadow: 1px 2px 8px rgba(0, 0, 0, .2);
+        }
+
+        .left-side .bottom .contents li{
+            padding-left: 40px;
+            text-align: center;
+            height: 48px;
+            line-height: 48px;
+            font-size: 15px;
+            color: black;
+            cursor: pointer;
+
+            position: relative;
+            transition: all 0.2s;
+        }
+
+        .left-side .bottom .contents li:hover{
+            background-color: #F5F5F5;
+        }
+
+        .left-side .bottom .contents li.active{
+            color: #A1D68F;
+        }
+
+        .left-side .bottom .contents li.active::before{
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background-color: #6BBF4E;
+        }
+
+        .left-side .bottom .contents li.active:hover{
+            background-color: #EEF7EA;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topbar">
+        <ul class="left-list">
+            <li>Home</li>
+            <li>Docs</li>
+            <li>API Docs</li>
+        </ul>
+
+        <div class="login-logout">
+            Login/Register
+        </div>
+        <div class="search">
+            <input type="text" placeholder="查找">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <div class="title">
+            <img src="./images/logo.png" alt="">
+            <div class="text">CRXcavator</div>
+        </div>
+    </div>
+
+    <div class="left-side">
+        <div class="profile card">
+            <div class="top">
+                <div class="image-wrapper">
+                    <img src="./images/example.jpg" alt="">
+                </div>
+                <div class="text">
+                    <div class="title">
+                        Sendoso
+                    </div>
+                    <div class="info">
+                        The Official Sendoso Chrome Extension. We source, store, ship, and track ROI for anything you
+                        ever need to send.
+                    </div>
+                </div>
+            </div>
+
+            <div class="criterion">
+                This extension has <b>10,000 users</b><br>
+                It has <b>8 webstore reviews</b><br>
+                This extension's average webstore rating is <b>4.5/5</b><br>
+            </div>
+
+            <div class="policy">
+                View Privacy Policy&nbsp;&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+
+            <div class="webstore">
+            </div>
+
+            <div class="develop">
+                Developer Info
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+
+            <div class="footer">
+                <div class="left">
+                    LAST UPDATED 2022-04-17
+                </div>
+                <div class="right">
+                    SIZE: 171KiB
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div class="left">
+                <div class="version card">
+                    2.15.16
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+                <div class="source-code card">
+                    <i class="fa-solid fa-code"></i>&nbsp;&nbsp;Source Code
+                </div>
+            </div>
+
+            <ul class="contents">
+                <li class="active">RISK</li>
+                <li>PERMISSIONS</li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="right-side"></div>
+</body>
+
+</html>

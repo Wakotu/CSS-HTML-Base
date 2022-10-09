@@ -1,53 +1,39 @@
 <!--
  * @Author: Axiuxiu
  * @Date: 2022-02-21 17:33:15
- * @LastEditTime: 2022-03-08 17:07:01
- * @Description: 
+ * @LastEditTime: 2022-10-09 18:31:57
+ * @Description: about items in a flex container
 -->
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>测试</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>items in a flex container</title>
 
-    <style>
+  <style>
+    /* 使用flex能让元素被内容撑开 */
+    .flx-center{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .box{
+      height: 100px;
+      background-color: bisque;
+    }
     
-        .index {
-            width: 20px;
-            height: 20px;
-            background-color: #EDF1F7;
-            text-align: center;
-            line-height: 20px;
-            float: left;
-        }
-
-        .text {
-            float: left;
-        }
-
-        .heat {
-            float: right;
-        }
-    </style>
+    .box .btn{
+      background-color: slateblue;
+    }
+  </style>
 </head>
-
 <body>
-
-    <ul>
-        <li>
-            <div class="index">1</div>
-            <div class="text">事件标题</div>
-            <div class="heat">事件热度</div>
-        </li>
-    </ul>
-
-    <script>
-        var a=10;
-        console.log(window.a);
-    </script>
+  <div class="box flx-center">
+    <div class="btn">你好啊</div>
+  </div>
 </body>
-
 </html>

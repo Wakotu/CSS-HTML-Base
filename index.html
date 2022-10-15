@@ -1,39 +1,36 @@
 <!--
  * @Author: Axiuxiu
  * @Date: 2022-02-21 17:33:15
- * @LastEditTime: 2022-10-09 18:31:57
- * @Description: about items in a flex container
+ * @LastEditTime: 2022-10-11 09:41:09
+ * @Description: 尝试使用viewport-based length unit
 -->
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>items in a flex container</title>
+  <title>长度单位</title>
 
   <style>
-    /* 使用flex能让元素被内容撑开 */
-    .flx-center{
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    html,
+    body {
+      margin: 0;
+      padding: 0;
     }
 
-    .box{
-      height: 100px;
-      background-color: bisque;
-    }
-    
-    .box .btn{
-      background-color: slateblue;
+    .box {
+      height: 100vh;
+      width: 100vw;
+      background-color: violet;
     }
   </style>
 </head>
+
 <body>
-  <div class="box flx-center">
-    <div class="btn">你好啊</div>
-  </div>
+  <div class="box"></div>
 </body>
+
 </html>

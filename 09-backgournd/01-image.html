@@ -1,0 +1,41 @@
+<!--
+ * @Author: Axiuxiu
+ * @Date: 2022-10-12 16:50:10
+ * @LastEditTime: 2022-10-12 20:04:08
+ * @Description: 渐变色叠加无背景图片
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>渐变色叠加无背景图片</title>
+
+  <style>
+    .box {
+      width: 300px;
+      height: 300px;
+      margin: 100px auto;
+
+      background-image: linear-gradient(to bottom right, rgba(0, 0, 255, .5), rgba(255, 255, 0, .5)), url('../images/lizard.png');
+    }
+
+    .box.bg {
+      background-image: url('../images/lizard.png');
+      background-repeat: no-repeat;
+      background-position: bottom 20px right 10px;
+
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <div class="box bg"></div>
+</body>
+
+</html>

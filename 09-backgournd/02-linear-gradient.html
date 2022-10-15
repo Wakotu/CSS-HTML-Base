@@ -1,0 +1,36 @@
+<!--
+ * @Author: Axiuxiu
+ * @Date: 2022-10-14 09:45:08
+ * @LastEditTime: 2022-10-14 10:01:14
+ * @Description: a demo for css function linear-gradient()
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>linear gradient</title>
+  <style>
+    .box {
+      width: 300px;
+      height: 200px;
+      margin: 100px auto 0;
+
+      background: linear-gradient(-45deg, rgba(255, 255, 0, .5), rgba(0, 0, 255, .5));
+    }
+
+    .box.repeat {
+      background: repeating-linear-gradient(-45deg, white 0, white 20px, black 20px, black 40px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <div class="box repeat"></div>
+</body>
+
+</html>

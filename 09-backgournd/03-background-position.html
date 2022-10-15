@@ -1,0 +1,40 @@
+<!--
+ * @Author: Axiuxiu
+ * @Date: 2022-10-14 10:49:55
+ * @LastEditTime: 2022-10-15 10:12:54
+ * @Description: a demov for background position
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>background animation</title>
+
+  <style>
+    .box {
+      width: 300px;
+      height: 200px;
+      margin: 100px auto 0;
+
+      border: 2px solid black;
+      background: repeating-linear-gradient(-45deg, white 0, white 10px, black 10px, black 20px) 0 0/150%;
+      animation: panoramic 10s linear infinite;
+    }
+
+    @keyframes panoramic {
+      to {
+        background-position: 200% 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+</body>
+
+</html>
